@@ -1,0 +1,112 @@
+
+Showing logs for build [32mdibisis-express-hello-master-nsxbz-1[0m stage [32mfrom-build-pack[0m and container [32mcredential-initializer[0m
+{"level":"info","ts":1596587759.5865643,"caller":"creds-init/main.go:44","msg":"Credentials initialized."}
+
+Showing logs for build [32mdibisis-express-hello-master-nsxbz-1[0m stage [32mfrom-build-pack[0m and container [32mworking-dir-initializer[0m
+
+Showing logs for build [32mdibisis-express-hello-master-nsxbz-1[0m stage [32mfrom-build-pack[0m and container [32mplace-tools[0m
+
+Showing logs for build [32mdibisis-express-hello-master-nsxbz-1[0m stage [32mfrom-build-pack[0m and container [32mstep-git-source-dibisis-express-hello-master-nsxbz-np4wc[0m
+{"level":"info","ts":1596587808.9666293,"caller":"git/git.go:105","msg":"Successfully cloned https://github.com/*******/express-hello.git @ v0.0.1 in path /workspace/source"}
+{"level":"warn","ts":1596587808.9667575,"caller":"git/git.go:152","msg":"Unexpected error: creating symlink: symlink /tekton/home/.ssh /root/.ssh: file exists"}
+{"level":"info","ts":1596587809.0141642,"caller":"git/git.go:133","msg":"Successfully initialized and updated submodules in path /workspace/source"}
+
+Showing logs for build [32mdibisis-express-hello-master-nsxbz-1[0m stage [32mfrom-build-pack[0m and container [32mstep-setup-builder-home[0m
+
+Showing logs for build [32mdibisis-express-hello-master-nsxbz-1[0m stage [32mfrom-build-pack[0m and container [32mstep-git-merge[0m
+Using SHAs from PULL_REFS=master:
+WARNING: no SHAs to merge, falling back to initial cloned commit
+
+Showing logs for build [32mdibisis-express-hello-master-nsxbz-1[0m stage [32mfrom-build-pack[0m and container [32mstep-setup-jx-git-credentials[0m
+Generated Git credentials file /workspace/xdg_config/git/credentials
+
+Showing logs for build [32mdibisis-express-hello-master-nsxbz-1[0m stage [32mfrom-build-pack[0m and container [32mstep-build-npmrc[0m
+WARNING: failed to find Secret npm-token in namespace **
+
+Showing logs for build [32mdibisis-express-hello-master-nsxbz-1[0m stage [32mfrom-build-pack[0m and container [32mstep-build-npm-install[0m
+npm WARN express-hello@1.0.0 No repository field.
+
+added 50 packages from 37 contributors and audited 50 packages in 1.48s
+found 0 vulnerabilities
+
+
+Showing logs for build [32mdibisis-express-hello-master-nsxbz-1[0m stage [32mfrom-build-pack[0m and container [32mstep-build-npm-test[0m
+
+> express-hello@1.0.0 test /workspace/source
+> exit 0
+
+
+Showing logs for build [32mdibisis-express-hello-master-nsxbz-1[0m stage [32mfrom-build-pack[0m and container [32mstep-build-container-build[0m
+E0805 00:36:55.433844      10 aws_credentials.go:77] while getting AWS credentials NoCredentialProviders: no valid providers in chain. Deprecated.
+	For verbose messaging see aws.Config.CredentialsChainVerboseErrors
+[36mINFO[0m[0001] Using dockerignore file: /workspace/source/.dockerignore 
+[36mINFO[0m[0001] Retrieving image manifest node:9-slim        
+E0805 00:36:56.380245      10 metadata.go:154] while reading 'google-dockercfg' metadata: http status code: 404 while fetching url http://metadata.google.internal./computeMetadata/v1/instance/attributes/google-dockercfg
+E0805 00:36:56.385376      10 metadata.go:166] while reading 'google-dockercfg-url' metadata: http status code: 404 while fetching url http://metadata.google.internal./computeMetadata/v1/instance/attributes/google-dockercfg-url
+[36mINFO[0m[0004] Retrieving image manifest node:9-slim        
+[36mINFO[0m[0006] Built cross stage deps: map[]                
+[36mINFO[0m[0006] Retrieving image manifest node:9-slim        
+[36mINFO[0m[0009] Retrieving image manifest node:9-slim        
+[36mINFO[0m[0012] Executing 0 build triggers                   
+[36mINFO[0m[0012] cmd: EXPOSE                                  
+[36mINFO[0m[0012] Adding exposed port: 8080/tcp                
+[36mINFO[0m[0012] Checking for cached layer gcr.io/jenkins-x-285402/cache:bd480ee0b10661d9fc802b8c08d58a61b1042314556278d6932225f9cfdf0ed5... 
+[36mINFO[0m[0013] No cached layer found for cmd COPY . .       
+[36mINFO[0m[0013] Unpacking rootfs as cmd COPY . . requires it. 
+[36mINFO[0m[0021] ENV PORT 8080                                
+[36mINFO[0m[0021] No files changed in this command, skipping snapshotting. 
+[36mINFO[0m[0021] EXPOSE 8080                                  
+[36mINFO[0m[0021] cmd: EXPOSE                                  
+[36mINFO[0m[0021] Adding exposed port: 8080/tcp                
+[36mINFO[0m[0021] No files changed in this command, skipping snapshotting. 
+[36mINFO[0m[0021] WORKDIR /usr/src/app                         
+[36mINFO[0m[0021] cmd: workdir                                 
+[36mINFO[0m[0021] Changed working directory to /usr/src/app    
+[36mINFO[0m[0021] Creating directory /usr/src/app              
+[36mINFO[0m[0021] Resolving 1 paths                            
+[36mINFO[0m[0021] Taking snapshot of files...                  
+[36mINFO[0m[0021] COPY . .                                     
+[36mINFO[0m[0021] Resolving 510 paths                          
+[36mINFO[0m[0021] Taking snapshot of files...                  
+[36mINFO[0m[0021] Pushing layer gcr.io/jenkins-x-285402/cache:bd480ee0b10661d9fc802b8c08d58a61b1042314556278d6932225f9cfdf0ed5 to cache now 
+[36mINFO[0m[0021] CMD ["npm", "start"]                         
+[36mINFO[0m[0021] No files changed in this command, skipping snapshotting. 
+
+Showing logs for build [32mdibisis-express-hello-master-nsxbz-1[0m stage [32mfrom-build-pack[0m and container [32mstep-build-post-build[0m
+no CVE provider running in the current ** namespace so skip adding image to be analysed
+
+Showing logs for build [32mdibisis-express-hello-master-nsxbz-1[0m stage [32mfrom-build-pack[0m and container [32mstep-promote-changelog[0m
+Converted /workspace/source/charts/express-hello to an unshallow repository
+Generating change log from git ref eab9fcbef1047daabe357df78c4995257722fbea => eb3fb2b909801f93106b9b00e5f07e2c72633dd2
+Associating user ******* in users.jenkins.io with email *******@gmail.com to git GitProvider user with login *******-0 as emails match
+Adding label jenkins.io/git-github-userid=*******-0 to user ******* in users.jenkins.io
+Associating user ******* in users.jenkins.io with email *******@gmail.com to git GitProvider user with login *******-0 as emails match
+Adding label jenkins.io/git-github-userid=*******-0 to user ******* in users.jenkins.io
+Finding issues in commit messages using git format
+WARNING: No release found for *******/express-hello and tag v0.0.1 so creating a new release
+Updated the release information at https://github.com/*******/express-hello/releases/tag/v0.0.1
+generated: /workspace/source/charts/express-hello/templates/release.yaml
+Created Release express-hello-0-0-1 resource in namespace **
+Updating PipelineActivity *******-express-hello-master-1 with version 0.0.1
+Updated PipelineActivities *******-express-hello-master-1 with release notes URL: https://github.com/*******/express-hello/releases/tag/v0.0.1
+
+Showing logs for build [32mdibisis-express-hello-master-nsxbz-1[0m stage [32mfrom-build-pack[0m and container [32mstep-promote-helm-release[0m
+WARNING: No $CHART_REPOSITORY defined so using the default value of: http://jenkins-x-chartmuseum:8080
+Adding missing Helm repo: storage.googleapis.com https://storage.googleapis.com/chartmuseum.jenkins-x.io
+Successfully added Helm repository storage.googleapis.com.
+Adding missing Helm repo: jenkins-x-chartmuseum http://jenkins-x-chartmuseum:8080
+Successfully added Helm repository jenkins-x-chartmuseum.
+WARNING: No $CHART_REPOSITORY defined so using the default value of: http://jenkins-x-chartmuseum:8080
+Uploading chart file express-hello-0.0.1.tgz to http://jenkins-x-chartmuseum:8080/api/charts
+Received 201 response: {"saved":true}
+
+Showing logs for build [32mdibisis-express-hello-master-nsxbz-1[0m stage [32mfrom-build-pack[0m and container [32mstep-promote-jx-promote[0m
+WARNING: prow based install so skip waiting for the merge of Pull Requests to go green as currently there is an issue with gettingstatuses from the PR, see https://github.com/jenkins-x/**/issues/2410
+WARNING: No $CHART_REPOSITORY defined so using the default value of: http://jenkins-x-chartmuseum:8080
+Promoting app express-hello version 0.0.1 to namespace **-staging
+Created Pull Request: https://github.com/*******/environment-jenkinsx-staging/pull/2
+Added label updatebot to Pull Request https://github.com/*******/environment-jenkinsx-staging/pull/2
+got git provider status pending from PR https://github.com/*******/environment-jenkinsx-staging/pull/2
+Pull Request https://github.com/*******/environment-jenkinsx-staging/pull/2 is merged at sha effea2593065b3719b570d74c09e13c41bdb8bb9
+Pull Request merged but we are not waiting for the update pipeline to complete!
+WARNING: Could not find the service URL in namespace **-staging for names express-hello, **-express-hello, **-staging-express-hello
